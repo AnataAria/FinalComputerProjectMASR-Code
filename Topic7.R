@@ -1,4 +1,5 @@
-#Q15
+#Topic 7: Test of Hypotheses for a Single Sample
+#Question 15
 Q15_TTest <- t.test(yourdata$IQ, mu = 100)
 if(Q15_TTest$p.value < 0.1){
   cat("Reject H0: The data provides evidence that the population mean IQ is not equal to 100.");
@@ -6,7 +7,7 @@ if(Q15_TTest$p.value < 0.1){
   cat("Fail to reject H0: The data does not provide evidence that the population mean IQ is not equal to 100.")
 }
 
-#Q16
+#Question 16
 Q16_Ttest<-t.test(log(yourdata$lwage), mu = 6, alternative = "greater")
 if(Q16_Ttest$p.value < 0.1){
   cat("Reject H0: The data provides evidence that the population mean lwage is not equal to 6.");
@@ -14,7 +15,7 @@ if(Q16_Ttest$p.value < 0.1){
   cat("Fail to reject H0: The data does not provide evidence that the population mean lwage is not equal to 6.")
 }
 
-#Q17
+#Question 17
 
 # Set the significance level
 alpha <- 0.05

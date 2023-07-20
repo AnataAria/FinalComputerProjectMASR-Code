@@ -1,3 +1,5 @@
+#Topic 8: Simple Linear Regression and Correlation
+#Question 19
 fit <- lm(wage ~ educ, data = yourdata)
 summary_fit <- summary(fit)
 
@@ -24,3 +26,11 @@ if (p_value < 0.10) {
 } else {
   cat("The p-value is", p_value, "which is greater than or equal to 0.10. We do not have enough evidence to reject the null hypothesis that there is no relationship between educ and wage.\n")
 }
+
+
+#Question 20
+fit1 <- lm(wage ~ educ, data = yourdata)
+fit2 <- lm(lwage ~ educ, data = yourdata)
+
+summary(fit1)$r.squared
+summary(fit2)$r.squared

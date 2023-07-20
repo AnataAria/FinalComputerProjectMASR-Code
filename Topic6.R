@@ -1,7 +1,4 @@
-id<- 501	# Your ID: SE140459  id <- 459
-set.seed(id)
-yourdata<-wage[sample(1:nrow(wage),30),]
-
+#Topic 6:Statistical Intervals for a Single Sample
 #Question 10
 n <- 30 # sample size
 sigma <- 0.44 # standard deviation
@@ -14,7 +11,7 @@ t.test(wage$IQ, conf.level = 0.96)
 
 #Question 12
 n <- (qnorm(1 - (0.05 / 2)) * 0.44 / 0.2) ^ 2
-
+cat("The sample size should use: ", n)
 #Q13 
 # Calculate the sample proportion
 p_hat <- mean(yourdata$nearc4)
@@ -45,5 +42,6 @@ E <- 0.01
 z <- qnorm(0.995)
 # Calculate n
 n <- z^2 * p * (1-p) / E^2
+cat("The sample size should use: ", n)
 
 
